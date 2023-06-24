@@ -5,8 +5,8 @@ namespace Src\SRP;
 class EmptyGarden
 {
 
-    private int $height;
-    private int $width;
+    protected int $height;
+    protected int $width;
 
     public function __construct($height, $width)
     {
