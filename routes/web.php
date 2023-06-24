@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Src\OCP\BananaGarden;
 use Src\OCP\MarijuanaGarden;
 use Src\SRP\EmptyGarden;
 
@@ -13,5 +14,7 @@ use Src\SRP\EmptyGarden;
 
 //Open Closed Principal
 $object = new MarijuanaGarden(3,5);
+$banana = new BananaGarden(3,2);
 
-dd($object->items());
+
+dd($banana->items());
