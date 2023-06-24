@@ -2,21 +2,21 @@
 
 namespace Src\SRP;
 
+use Src\LSP\PlotArea;
+
 class EmptyGarden
 {
 
-    protected int $height;
-    protected int $width;
+    protected PlotArea $area;
 
-    public function __construct($height, $width)
+    public function __construct(PlotArea $area)
     {
-        $this->height = $height;
-        $this->width = $width;
+        $this->area = $area;
     }
 
-    public function items()
+    public function items(): array
     {
-        $numberOfSpots = ceil($this->width *$this->height);
+        $numberOfSpots = $this->area->noOfPlots();
 
         return array_fill(0, $numberOfSpots, "handful of dirt.");
     }

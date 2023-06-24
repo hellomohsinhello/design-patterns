@@ -5,10 +5,10 @@ namespace Src\OCP;
 use Src\SRP\EmptyGarden;
 
 class MarijuanaGarden extends EmptyGarden{
-    public function items()
+    public function items(): array
     {
-        $noOfSpots = ceil($this->width * $this->height);
+        $noOfPlots = $this->area->noOfPlots();
 
-        return array_fill(0, $noOfSpots,'Marijuana');
+        return array_fill(0, $noOfPlots,'Marijuana');
     }
 }
